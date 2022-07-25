@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsModule } from './products/products.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProductsModule } from './products/products.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    UserModule,
     ProductsModule
   ],
   providers: [],
