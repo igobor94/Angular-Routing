@@ -3,4 +3,6 @@
 <div *ngFor="let product of products">
     <p>{{product.title}}</p>
     <p>{{product.description}}</p>
+    <a [routerLink]="['/products', product.id]">Details</a>
+    <a [routerLink]="['/products', product.id, 'edit']">Edit</a>
 </div>
