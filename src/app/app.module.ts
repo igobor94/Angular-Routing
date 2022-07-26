@@ -17,10 +17,10 @@ import { UserModule } from './user/user.module';
     HomeComponent
   ],
   imports: [
+    UserModule,
+    ProductsModule,
     BrowserModule,
     AppRoutingModule,
-    UserModule,
-    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
