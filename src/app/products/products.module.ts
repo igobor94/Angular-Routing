@@ -17,8 +17,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
   imports: [
     SharedModule,
     RouterModule.forChild([
-      { path: 'products', component: ProductListComponent },
-      { path: 'products/:id', component: ProductDetailComponent },
+      { path: 'products', component: ProductListComponent, data: { pageTitle: 'Product List' } },
+      { path: 'products/:id', component: ProductDetailComponent},
       { path: 'products/:id/edit', component: ProductEditComponent },
     ])
   ],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from 'src/app/core/products.service';
 
 @Component({
@@ -9,11 +10,13 @@ import { ProductsService } from 'src/app/core/products.service';
 export class ProductListComponent implements OnInit {
 
   products: any = [];
+  pageTitle: string = '';
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getProducts()
+    this.pageTitle = this.route.snapshot.data['pageTitle']
   }
 
   getProducts() {
