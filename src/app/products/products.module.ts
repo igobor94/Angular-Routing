@@ -34,6 +34,21 @@ import { ProductsEditTagsComponent } from './products-edit-tags/products-edit-ta
         path: 'products/:id/edit',
         component: ProductEditComponent,
         resolve: { resolvedData: ProductsResolver },
+        children: [
+          {
+            path: '', 
+            redirectTo: 'info',
+            pathMatch: 'full'
+          },
+          {
+            path: 'info', 
+            component: ProductsEditInfoComponent
+          }, 
+          {
+            path: 'tags', 
+            component: ProductsEditTagsComponent
+          },
+        ]
       },
     ]),
   ],
